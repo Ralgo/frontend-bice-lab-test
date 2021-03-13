@@ -15,6 +15,10 @@ import {NzMenuModule} from 'ng-zorro-antd/menu';
 import {NzButtonModule} from 'ng-zorro-antd/button';
 import {NZ_CONFIG, NzConfig} from 'ng-zorro-antd/core/config';
 import {IndicatorComponent} from './pages/indicator/indicator.component';
+import {IndeconValueComponent} from './pages/indecon-value/indecon-value.component';
+import {NzCollapseModule} from 'ng-zorro-antd/collapse';
+import {NzTypographyModule} from 'ng-zorro-antd/typography';
+import {NzSpaceModule} from 'ng-zorro-antd/space';
 
 registerLocaleData(es);
 
@@ -27,6 +31,7 @@ const ngZorroConfig: NzConfig = {
   declarations: [
     AppComponent,
     IndicatorComponent,
+    IndeconValueComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,7 +42,10 @@ const ngZorroConfig: NzConfig = {
     IconsProviderModule,
     NzLayoutModule,
     NzMenuModule,
-    NzButtonModule
+    NzButtonModule,
+    NzCollapseModule,
+    NzTypographyModule,
+    NzSpaceModule
   ],
   providers: [{provide: NZ_I18N, useValue: es_ES}, {provide: NZ_CONFIG, useValue: ngZorroConfig}],
   bootstrap: [AppComponent]
