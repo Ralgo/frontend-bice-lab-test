@@ -1,0 +1,15 @@
+<!--<h2 nz-typoghrapy>Indicadores</h2>-->
+<button nz-button nzType="primary" (click)="onSearch()"><i nz-icon nzType="search"></i>Obtener indicadores</button>
+<p></p>
+    <nz-collapse [nzBordered]="false" [nzAccordion]="true">
+      <nz-collapse-panel *ngFor="let indeconValue of indeconValuesArray" [nzHeader]="indeconValue.key">
+        <p nz-typoghrapy><span nz-typoghrapy><strong>Nombre: </strong></span> {{indeconValue.name}}</p>
+        <p nz-typoghrapy><span nz-typoghrapy><strong>Unidad: </strong></span> {{indeconValue.unit}}</p>
+        <p nz-typoghrapy><span nz-typoghrapy><strong>Valor: </strong></span> {{indeconValue.value | currency}}</p>
+      </nz-collapse-panel>
+    </nz-collapse>
+
+
+<!--  <app-indecon-value *ngFor="let indeconValue of indeconValuesArray"
+                     [indeconValue]="indeconValue">
+  </app-indecon-value>-->
